@@ -36,7 +36,7 @@ class TaskController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','complete'),
+				'actions'=>array('create','update','complete', 'completed'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -180,8 +180,32 @@ class TaskController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Task');
+		$dataProvider=new CActiveDataProvider('Task', array(
+		    'criteria'=>array(
+		        'condition'=>'finished IS NULL',
+		    ),
+		));
+
 		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+
+	/**
+	 * Lists completed tasks
+	 */
+	public function actionCompleted()
+	{
+		$dataProvider=new CActiveDataProvider('Task', array(
+		    'criteria'=>array(
+		        'condition'=>'finished IS NOT NULL',
+		    ),
+		    'pagination'=>array(
+		        'pageSize'=>20,
+		    ),
+		));
+
+		$this->render('completed',array(
 			'dataProvider'=>$dataProvider,
 		));
 	}
