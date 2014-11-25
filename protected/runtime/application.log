@@ -1,0 +1,60 @@
+2014/11/24 11:06:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /Users/zane/work/project/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/zane/work/project/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/zane/work/project/index.php(8): CApplication->run()
+#3 /Users/zane/work/project/yii/framework/cli/commands/ShellCommand.php(78): require('/Users/zane/wor...')
+#4 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ShellCommand->run(Array)
+#5 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#6 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#7 /Users/zane/work/project/yii/framework/yiic.php(33): CApplication->run()
+#8 /Users/zane/work/project/protected/yiic.php(7): require_once('/Users/zane/wor...')
+#9 /Users/zane/work/project/protected/yiic(4): require_once('/Users/zane/wor...')
+#10 {main}
+REQUEST_URI=/index.php
+---
+2014/11/24 11:08:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /Users/zane/work/project/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/zane/work/project/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/zane/work/project/index.php(8): CApplication->run()
+#3 /Users/zane/work/project/yii/framework/cli/commands/ShellCommand.php(78): require('/Users/zane/wor...')
+#4 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ShellCommand->run(Array)
+#5 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#6 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#7 /Users/zane/work/project/yii/framework/yiic.php(33): CApplication->run()
+#8 /Users/zane/work/project/protected/yiic.php(7): require_once('/Users/zane/wor...')
+#9 /Users/zane/work/project/protected/yiic(4): require_once('/Users/zane/wor...')
+#10 {main}
+REQUEST_URI=/index.php
+---
+2014/11/24 11:09:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /Users/zane/work/project/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/zane/work/project/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/zane/work/project/index.php(8): CApplication->run()
+#3 /Users/zane/work/project/yii/framework/cli/commands/ShellCommand.php(78): require('/Users/zane/wor...')
+#4 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ShellCommand->run(Array)
+#5 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#6 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#7 /Users/zane/work/project/yii/framework/yiic.php(33): CApplication->run()
+#8 /Users/zane/work/project/protected/yiic.php(7): require_once('/Users/zane/wor...')
+#9 /Users/zane/work/project/protected/yiic(4): require_once('/Users/zane/wor...')
+#10 {main}
+REQUEST_URI=/index.php
+---
+2014/11/24 11:11:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in /Users/zane/work/project/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/zane/work/project/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#1 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/zane/work/project/index.php(8): CApplication->run()
+#3 /Users/zane/work/project/yii/framework/cli/commands/ShellCommand.php(78): require('/Users/zane/wor...')
+#4 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ShellCommand->run(Array)
+#5 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#6 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#7 /Users/zane/work/project/yii/framework/yiic.php(33): CApplication->run()
+#8 /Users/zane/work/project/protected/yiic.php(7): require_once('/Users/zane/wor...')
+#9 /Users/zane/work/project/protected/yiic(4): require_once('/Users/zane/wor...')
+#10 {main}
+REQUEST_URI=/index.php
+---
