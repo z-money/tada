@@ -138,17 +138,19 @@ class TaskController extends Controller
 	/**
 	 * Fails a task
 	 */
-	public function actionFail()
+	public function actionFail($model = null)
 	{
-		$model = $this->loadModel();
+		if($model == null)
+			$model = $this->loadModel();
+		date_default_timezone_set('UTC');
 		$now = date("Y-m-d H:i:s");
 
-		if(!$model->finished || $model->finished == '0000-00-00 00:00:00')
+		if($model->finished == null || $model->finished == '0000-00-00 00:00:00')
 		{
 			$model->finished = $now;
-			$model->failed = true;
+			$model->failed = 1;
 			if($model->save())
-				echo $now;
+				return $now;
 		}
 		else
 			throw new CHttpException(400,'Invalid request.  This task has already been completed.');

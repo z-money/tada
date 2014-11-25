@@ -4,6 +4,8 @@ class ArchiveTasksCommand extends CConsoleCommand
 {
 	public function actionFailDailyTasks()
 	{
+		Yii::import('application.controllers.TaskController');
+		
 		$dataProvider=new CActiveDataProvider('Task', array(
 		    'criteria'=>array(
 		        'condition'=>'finished IS NULL and daily = 1',
@@ -15,7 +17,8 @@ class ArchiveTasksCommand extends CConsoleCommand
 
 		foreach($dataProvider->getData() as $data)
 		{
-			
+			$task = Task::model()->findByPk($data->id);
+			print TaskController::actionFail($task);
 		}
 	}
 	public function actionCloneDailyTasks()
