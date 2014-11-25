@@ -1,6 +1,6 @@
 <?php
 
-class TaskController extends Controller
+class TaskTemplateController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -36,7 +36,7 @@ class TaskController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','complete'),
+				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -65,14 +65,14 @@ class TaskController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Task;
+		$model=new TaskTemplate;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Task']))
+		if(isset($_POST['TaskTemplate']))
 		{
-			$model->attributes=$_POST['Task'];
+			$model->attributes=$_POST['TaskTemplate'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -80,18 +80,6 @@ class TaskController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
-	}
-
-	/**
-	 * Clones a new Task via argument
-	 * If creation is successful, the id will be returned
-	 */
-	public function actionClone($model)
-	{
-		if($model->save())
-			return $model->id;
-		
-		return false;
 	}
 
 	/**
@@ -105,9 +93,9 @@ class TaskController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Task']))
+		if(isset($_POST['TaskTemplate']))
 		{
-			$model->attributes=$_POST['Task'];
+			$model->attributes=$_POST['TaskTemplate'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -115,43 +103,6 @@ class TaskController extends Controller
 		$this->render('update',array(
 			'model'=>$model,
 		));
-	}
-
-	/**
-	 * Completes a Task
-	 */
-	public function actionComplete()
-	{
-		$model = $this->loadModel();
-		$now = date("Y-m-d H:i:s");
-		
-		if(!$model->finished || $model->finished == '0000-00-00 00:00:00')
-		{
-			$model->finished = $now;
-			if($model->save())
-				echo $now;
-		}
-		else
-			throw new CHttpException(400,'Invalid request.  This task has already been completed.');
-	}
-
-	/**
-	 * Fails a task
-	 */
-	public function actionFail()
-	{
-		$model = $this->loadModel();
-		$now = date("Y-m-d H:i:s");
-
-		if(!$model->finished || $model->finished == '0000-00-00 00:00:00')
-		{
-			$model->finished = $now;
-			$model->failed = true;
-			if($model->save())
-				echo $now;
-		}
-		else
-			throw new CHttpException(400,'Invalid request.  This task has already been completed.');
 	}
 
 	/**
@@ -178,7 +129,7 @@ class TaskController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Task');
+		$dataProvider=new CActiveDataProvider('TaskTemplate');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -189,10 +140,10 @@ class TaskController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Task('search');
+		$model=new TaskTemplate('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Task']))
-			$model->attributes=$_GET['Task'];
+		if(isset($_GET['TaskTemplate']))
+			$model->attributes=$_GET['TaskTemplate'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -208,7 +159,7 @@ class TaskController extends Controller
 		if($this->_model===null)
 		{
 			if(isset($_GET['id']))
-				$this->_model=Task::model()->findbyPk($_GET['id']);
+				$this->_model=TaskTemplate::model()->findbyPk($_GET['id']);
 			if($this->_model===null)
 				throw new CHttpException(404,'The requested page does not exist.');
 		}
@@ -221,7 +172,7 @@ class TaskController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='task-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='task-template-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

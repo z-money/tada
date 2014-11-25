@@ -1,25 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "task".
+ * This is the model class for table "task_template".
  *
- * The followings are the available columns in table 'task':
+ * The followings are the available columns in table 'task_template':
  * @property integer $id
  * @property string $name
  * @property string $description
- * @property string $created
- * @property string $finished
  * @property integer $daily
- * @property integer $failed
  */
-class Task extends CActiveRecord
+class TaskTemplate extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'task';
+		return 'task_template';
 	}
 
 	/**
@@ -30,14 +27,12 @@ class Task extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
-			array('daily, failed', 'numerical', 'integerOnly'=>true),
+			array('daily', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>20),
 			array('description', 'length', 'max'=>140),
-			array('created, finished', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, description, created, finished, daily, failed', 'safe', 'on'=>'search'),
+			array('id, name, description, daily', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,10 +56,7 @@ class Task extends CActiveRecord
 			'id' => 'Id',
 			'name' => 'Name',
 			'description' => 'Description',
-			'created' => 'Created',
-			'finished' => 'Finished',
 			'daily' => 'Daily',
-			'failed' => 'Failed',
 		);
 	}
 
@@ -92,22 +84,16 @@ class Task extends CActiveRecord
 
 		$criteria->compare('description',$this->description,true);
 
-		$criteria->compare('created',$this->created,true);
-
-		$criteria->compare('finished',$this->finished,true);
-
 		$criteria->compare('daily',$this->daily);
 
-		$criteria->compare('failed',$this->failed);
-
-		return new CActiveDataProvider('Task', array(
+		return new CActiveDataProvider('TaskTemplate', array(
 			'criteria'=>$criteria,
 		));
 	}
 
 	/**
 	 * Returns the static model of the specified AR class.
-	 * @return Task the static model class
+	 * @return TaskTemplate the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

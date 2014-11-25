@@ -23,5 +23,7 @@ $this->menu=array(
 		'description',
 		'created',
 		'finished',
+		'daily',
+		'failed',
 	),
 )); ?>

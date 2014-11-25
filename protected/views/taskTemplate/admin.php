@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'Tasks'=>array('index'),
+	'Task Templates'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List Task', 'url'=>array('index')),
-	array('label'=>'Create Task', 'url'=>array('create')),
+	array('label'=>'List TaskTemplate', 'url'=>array('index')),
+	array('label'=>'Create TaskTemplate', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -15,7 +15,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#task-grid').yiiGridView('update', {
+	$('#task-template-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -23,7 +23,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Tasks</h1>
+<h1>Manage Task Templates</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -38,19 +38,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'task-grid',
+	'id'=>'task-template-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
 		'name',
 		'description',
-		'created',
-		'finished',
 		'daily',
-		/*
-		'failed',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),

@@ -21,23 +21,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'finished'); ?>
-		<?php echo $form->textField($model,'finished'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'daily'); ?>
 		<?php echo $form->textField($model,'daily'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'failed'); ?>
-		<?php echo $form->textField($model,'failed'); ?>
 	</div>
 
 	<div class="row buttons">

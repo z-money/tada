@@ -12,20 +12,8 @@
 	<?php echo CHtml::encode($data->description); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('created')); ?>:</b>
-	<?php echo CHtml::encode($data->created); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('finished')); ?>:</b>
-	<?php echo CHtml::encode($data->finished); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('daily')); ?>:</b>
 	<?php echo CHtml::encode($data->daily); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('failed')); ?>:</b>
-	<?php echo CHtml::encode($data->failed); ?>
 	<br />
 
 

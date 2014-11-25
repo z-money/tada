@@ -58,3 +58,146 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/index.php
 ---
+2014/11/25 17:41:06 [error] [php] include(Task.php): failed to open stream: No such file or directory (/Users/zane/work/project/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /Users/zane/work/project/yii/framework/db/ar/CActiveRecord.php(395): spl_autoload_call()
+#1 /Users/zane/work/project/yii/framework/web/CActiveDataProvider.php(165): model()
+#2 /Users/zane/work/project/yii/framework/web/CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 /Users/zane/work/project/protected/commands/ArchiveTasksCommand.php(14): CActiveDataProvider->__construct()
+#4 unknown(0): ArchiveTasksCommand->actionResetDailyTasks()
+#5 /Users/zane/work/project/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#6 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ArchiveTasksCommand->run()
+#7 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#8 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#9 /Users/zane/work/project/yii/framework/yiic.php(33): CConsoleApplication->run()
+#10 /Users/zane/work/project/protected/yiic.php(7): require_once()
+#11 /Users/zane/work/project/protected/yiic(4): require_once()
+
+2014/11/25 17:44:48 [error] [php] include(Task.php): failed to open stream: No such file or directory (/Users/zane/work/project/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /Users/zane/work/project/yii/framework/db/ar/CActiveRecord.php(395): spl_autoload_call()
+#1 /Users/zane/work/project/yii/framework/web/CActiveDataProvider.php(165): model()
+#2 /Users/zane/work/project/yii/framework/web/CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 /Users/zane/work/project/protected/commands/ArchiveTasksCommand.php(14): CActiveDataProvider->__construct()
+#4 unknown(0): ArchiveTasksCommand->actionResetDailyTasks()
+#5 /Users/zane/work/project/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#6 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ArchiveTasksCommand->run()
+#7 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#8 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#9 /Users/zane/work/project/yii/framework/yiic.php(33): CConsoleApplication->run()
+#10 /Users/zane/work/project/protected/yiic.php(7): require_once()
+#11 /Users/zane/work/project/protected/yiic(4): require_once()
+
+2014/11/25 17:47:53 [error] [php] include(Task.php): failed to open stream: No such file or directory (/Users/zane/work/project/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /Users/zane/work/project/yii/framework/db/ar/CActiveRecord.php(395): spl_autoload_call()
+#1 /Users/zane/work/project/yii/framework/web/CActiveDataProvider.php(165): model()
+#2 /Users/zane/work/project/yii/framework/web/CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 /Users/zane/work/project/protected/commands/ArchiveTasksCommand.php(14): CActiveDataProvider->__construct()
+#4 unknown(0): ArchiveTasksCommand->actionResetDailyTasks()
+#5 /Users/zane/work/project/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#6 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ArchiveTasksCommand->run()
+#7 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#8 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#9 /Users/zane/work/project/yii/framework/yiic.php(33): CConsoleApplication->run()
+#10 /Users/zane/work/project/protected/yiic.php(7): require_once()
+#11 /Users/zane/work/project/protected/yiic(4): require_once()
+
+2014/11/25 17:48:20 [error] [php] include(Task.php): failed to open stream: No such file or directory (/Users/zane/work/project/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /Users/zane/work/project/yii/framework/db/ar/CActiveRecord.php(395): spl_autoload_call()
+#1 /Users/zane/work/project/yii/framework/web/CActiveDataProvider.php(165): model()
+#2 /Users/zane/work/project/yii/framework/web/CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 /Users/zane/work/project/protected/commands/ArchiveTasksCommand.php(14): CActiveDataProvider->__construct()
+#4 unknown(0): ArchiveTasksCommand->actionResetDailyTasks()
+#5 /Users/zane/work/project/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#6 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ArchiveTasksCommand->run()
+#7 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#8 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#9 /Users/zane/work/project/yii/framework/yiic.php(33): CConsoleApplication->run()
+#10 /Users/zane/work/project/protected/yiic.php(7): require_once()
+#11 /Users/zane/work/project/protected/yiic(4): require_once()
+
+2014/11/25 18:08:51 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'finished' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `task_template` `t` WHERE finished IS NULL and daily = 1.
+2014/11/25 18:08:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'finished' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `task_template` `t` WHERE finished IS NULL and daily = 1' in /Users/zane/work/project/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Users/zane/work/project/yii/framework/db/CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /Users/zane/work/project/yii/framework/db/ar/CActiveRecord.php(1601): CDbCommand->queryScalar()
+#2 /Users/zane/work/project/yii/framework/web/CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#3 /Users/zane/work/project/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 /Users/zane/work/project/yii/framework/web/CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#5 /Users/zane/work/project/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 /Users/zane/work/project/protected/commands/ArchiveTasksCommand.php(32): CDataProvider->getData()
+#7 [internal function]: ArchiveTasksCommand->actionCloneDailyTasks()
+#8 /Users/zane/work/project/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(ArchiveTasksCommand), Array)
+#9 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#10 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Users/zane/work/project/yii/framework/yiic.php(33): CApplication->run()
+#13 /Users/zane/work/project/protected/yiic.php(7): require_once('/Users/zane/wor...')
+#14 /Users/zane/work/project/protected/yiic(4): require_once('/Users/zane/wor...')
+#15 {main}
+---
+2014/11/25 18:23:27 [error] [php] include(TaskController.php): failed to open stream: No such file or directory (/Users/zane/work/project/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /Users/zane/work/project/protected/commands/ArchiveTasksCommand.php(42): spl_autoload_call()
+#1 unknown(0): ArchiveTasksCommand->actionCloneDailyTasks()
+#2 /Users/zane/work/project/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ArchiveTasksCommand->run()
+#4 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#5 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Users/zane/work/project/yii/framework/yiic.php(33): CConsoleApplication->run()
+#7 /Users/zane/work/project/protected/yiic.php(7): require_once()
+#8 /Users/zane/work/project/protected/yiic(4): require_once()
+
+2014/11/25 18:23:44 [error] [php] include(TaskController.php): failed to open stream: No such file or directory (/Users/zane/work/project/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /Users/zane/work/project/protected/commands/ArchiveTasksCommand.php(42): spl_autoload_call()
+#1 unknown(0): ArchiveTasksCommand->actionCloneDailyTasks()
+#2 /Users/zane/work/project/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ArchiveTasksCommand->run()
+#4 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#5 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Users/zane/work/project/yii/framework/yiic.php(33): CConsoleApplication->run()
+#7 /Users/zane/work/project/protected/yiic.php(7): require_once()
+#8 /Users/zane/work/project/protected/yiic(4): require_once()
+
+2014/11/25 18:31:48 [error] [php] include(/Users/zane/work/project/protected/modules/moduleName/controllers/TaskController.php): failed to open stream: No such file or directory (/Users/zane/work/project/yii/framework/YiiBase.php:401)
+Stack trace:
+#0 /Users/zane/work/project/protected/commands/ArchiveTasksCommand.php(44): spl_autoload_call()
+#1 unknown(0): ArchiveTasksCommand->actionCloneDailyTasks()
+#2 /Users/zane/work/project/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ArchiveTasksCommand->run()
+#4 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#5 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Users/zane/work/project/yii/framework/yiic.php(33): CConsoleApplication->run()
+#7 /Users/zane/work/project/protected/yiic.php(7): require_once()
+#8 /Users/zane/work/project/protected/yiic(4): require_once()
+
+2014/11/25 18:34:12 [error] [php] include(/Users/zane/work/project/protected/modules/Task/controllers/TaskController.php): failed to open stream: No such file or directory (/Users/zane/work/project/yii/framework/YiiBase.php:401)
+Stack trace:
+#0 /Users/zane/work/project/protected/commands/ArchiveTasksCommand.php(44): spl_autoload_call()
+#1 unknown(0): ArchiveTasksCommand->actionCloneDailyTasks()
+#2 /Users/zane/work/project/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): ArchiveTasksCommand->run()
+#4 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#5 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Users/zane/work/project/yii/framework/yiic.php(33): CConsoleApplication->run()
+#7 /Users/zane/work/project/protected/yiic.php(7): require_once()
+#8 /Users/zane/work/project/protected/yiic(4): require_once()
+
+2014/11/25 18:34:42 [error] [exception.CException] exception 'CException' with message 'ArchiveTasksCommand and its behaviors do not have a method or closure named "performAjaxValidation".' in /Users/zane/work/project/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/zane/work/project/protected/controllers/TaskController.php(91): CComponent->__call('performAjaxVali...', Array)
+#1 /Users/zane/work/project/protected/controllers/TaskController.php(91): ArchiveTasksCommand->performAjaxValidation(Object(Task))
+#2 /Users/zane/work/project/protected/commands/ArchiveTasksCommand.php(44): TaskController->actionClone(Object(Task))
+#3 [internal function]: ArchiveTasksCommand->actionCloneDailyTasks()
+#4 /Users/zane/work/project/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(ArchiveTasksCommand), Array)
+#5 /Users/zane/work/project/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Users/zane/work/project/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Users/zane/work/project/yii/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Users/zane/work/project/yii/framework/yiic.php(33): CApplication->run()
+#9 /Users/zane/work/project/protected/yiic.php(7): require_once('/Users/zane/wor...')
+#10 /Users/zane/work/project/protected/yiic(4): require_once('/Users/zane/wor...')
+#11 {main}
+---

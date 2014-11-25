@@ -33,6 +33,18 @@
 		<?php echo $form->error($model,'finished'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'daily'); ?>
+		<?php echo $form->textField($model,'daily'); ?>
+		<?php echo $form->error($model,'daily'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'failed'); ?>
+		<?php echo $form->textField($model,'failed'); ?>
+		<?php echo $form->error($model,'failed'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

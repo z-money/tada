@@ -1,7 +1,7 @@
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'task-form',
+	'id'=>'task-template-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -23,7 +23,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'daily'); ?>
-		<?php echo $form->checkBox($model,'daily'); ?>
+		<?php echo $form->textField($model,'daily'); ?>
 		<?php echo $form->error($model,'daily'); ?>
 	</div>
 

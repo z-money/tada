@@ -46,6 +46,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		'name',
 		'description',
 		'created',
+		'daily',
 		array(
 			'name' => 'finished',
 			'value' => 'CHtml::tag("span", array("id" => "finished_$data[id]"), "$data[finished]")',
