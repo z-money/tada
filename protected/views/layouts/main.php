@@ -32,6 +32,7 @@
 				array('label'=>'Tada', 'url'=>array('/task/index')),
 				array('label'=>'Completed', 'url'=>array('/task/completed')),
 				array('label'=>'Templates', 'url'=>array('/tasktemplate')),
+				array('label'=>'Stats', 'url'=>array('/site/stats')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
@@ -48,7 +49,7 @@
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by ZaneCo.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> by ZiCo.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->

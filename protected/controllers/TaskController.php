@@ -36,7 +36,7 @@ class TaskController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('index','create','update','complete', 'completed', 'clone'),
+				'actions'=>array('index','create','update','complete', 'completed', 'clone', 'list'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -108,6 +108,28 @@ class TaskController extends Controller
 		}
 
 		return false;
+	}
+
+	/**
+	 * Returns a jersern (JSON) object listing existing tasks
+	 */
+	public function actionList()
+	{
+		$dataProvider=new CActiveDataProvider('Task', array(
+		    'criteria'=>array(
+		        'condition'=>'finished IS NOT NULL',
+		    ),
+		    'pagination'=>false,
+		));
+
+		$data = array();
+
+		foreach($dataProvider->getData() as $datum)
+		{
+			$data[] = $datum->attributes;
+		}
+
+		echo json_encode($data);
 	}
 
 	/**

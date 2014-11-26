@@ -47,6 +47,14 @@ class SiteController extends Controller
 	}
 
 	/**
+	 * Renders the stats page
+	 */
+	public function actionStats()
+	{
+		$this->render('stats');
+	}
+
+	/**
 	 * Displays the contact page
 	 */
 	public function actionContact()
