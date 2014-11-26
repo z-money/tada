@@ -5,4 +5,4 @@ $this->pageTitle=Yii::app()->name;
 
 ?>
 
-hi
+Tada is a to do list.

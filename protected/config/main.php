@@ -6,6 +6,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Tada',
+	'defaultController' => 'task/index',
 
 	// autoloading model and component classes
 	'import'=>array(
