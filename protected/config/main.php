@@ -44,6 +44,13 @@ return array(
 		'user' => array(
 			'allowAutoLogin' => true,
 		),
+		'clientScript'=>array(
+            'packages'=>array(
+                'jquery'=>array(
+                    'js'=>array('canvasjs.min.js'),
+                )
+            ),
+        ),
 	),
 
 	// application-level parameters that can be accessed
