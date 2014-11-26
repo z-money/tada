@@ -7,6 +7,7 @@ $this->pageTitle=Yii::app()->name . ' - Login';
 $this->breadcrumbs=array(
 	'Login',
 );
+
 ?>
 
 <h1>Login</h1>
@@ -48,6 +49,9 @@ $this->breadcrumbs=array(
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Login'); ?>
 	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::link('New User', 'controller/user/create'); ?>
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->

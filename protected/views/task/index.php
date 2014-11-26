@@ -27,7 +27,7 @@ function completeTask(task_id)
 }
 </script>
 
-<h1>Tasks</h1>
+<h1>Tasks For <?php echo Yii::app()->user->id; ?></h1>
 
 <?php
 
@@ -53,7 +53,6 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'type' => 'raw',
 		),
 		array(
-            'name'=>'yo',
             'value' => 'CHtml::button("Complete Task", array("onclick"=>"completeTask($data[id])"))',
             'type' => 'raw'
         ),

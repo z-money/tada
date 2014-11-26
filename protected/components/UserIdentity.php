@@ -15,11 +15,20 @@ class UserIdentity extends CUserIdentity
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
 	 */
+
+	// private $id;
+
+	// public function getId()
+	// {
+	// 	return $this->id;
+	// }
+
 	public function authenticate()
 	{
 		$users=array(
 			// username => password
 			'demo'=>'demo',
+			'zane'=>'zane',
 			'admin'=>'admin',
 		);
 		if(!isset($users[$this->username]))

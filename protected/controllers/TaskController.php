@@ -32,11 +32,11 @@ class TaskController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','complete', 'completed'),
+				'actions'=>array('index','create','update','complete', 'completed', 'clone'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -86,11 +86,27 @@ class TaskController extends Controller
 	 * Clones a new Task via argument
 	 * If creation is successful, the id will be returned
 	 */
-	public function actionClone($model)
+	public function actionClone($model = null)
 	{
-		if($model->save())
-			return $model->id;
-		
+		if($model != null)
+		{
+			if($model->save())
+				return $model->id;
+			else
+				return false;
+		}
+
+		if(isset($_POST['Task']))
+		{
+			$model = new Task;
+			print_r($_POST['Task']);
+			$model->attributes = $_POST['Task'];
+			if($model->save())
+			{
+				return $model->id;
+			}
+		}
+
 		return false;
 	}
 
